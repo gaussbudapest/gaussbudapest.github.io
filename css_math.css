@@ -1,0 +1,19 @@
+/* stylesheet for equations */
+.serif { font-family: "Times New Roman", Garamond, serif; font-size: 18px; }
+.equation table { border-width: 0px; }
+.equation td { word-spacing: -0.1em; white-space: nowrap; }
+.fraction td { text-align: center; }
+.nom { padding-left: 2px; padding-right: 2px; border-bottom: black 1px solid; } /* nominator */
+.den { padding-left: 2px; padding-right: 2px; } /* denominator */
+.beforefract { width: 2px; }
+.afterfract { width: 6px; }
+.under td { text-align: center; }
+.top {}
+.bottom {}
+.beforeunder, .afterunder { width: 6px; font-size: 32px; font-family: "Arial"; padding-bottom: 4px; }
+.overline { text-decoration: overline; }
+.above, .below { font-size: 10px; }
+.above { vertical-align: 0.7ex; }
+.below { vertical-align: -0.3ex; }
+.below .serif { font-size: 13px; }
+.sqrt1 { background: url("gfx/sqrt1.png") no-repeat; padding-top: 1px; padding-left: 15px; padding-right: 3px;}

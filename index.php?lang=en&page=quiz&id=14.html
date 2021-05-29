@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<head>
+<title>Budapest - Quiz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<link rel="stylesheet" type="text/css" href="css_math.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css_nav.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_body.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_right.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="css_handheld.css" media="handheld" />
+<link rel="shortcut icon" href="gfx/favicon.ico" />
+<script type="text/javascript" src="external.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+</head>
+<!--
+<body>
+-->
+<body>
+<div id="container">
+<div id="sliding">
+<div id="jump"><a href="index.php%3Flang=en&amp;page=quiz&amp;id=14.html#content">Jump to content.</a></div>
+<div id="nav">
+  <ul>
+    <li id="langhu"><a href="index.php%3Flang=hu&amp;page=quiz&amp;id=14.html" title="Magyar verzió &ndash; Hungarian version"></a></li>
+    <li><a href="index.php%3Flang=en&amp;page=sightseeing.html">Sightseeing</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=exercises.html">Exercises</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=gallery.html">Gallery</a></li>
+    <li class="current">Quiz</li>
+    <li><a href="index.php%3Flang=en&amp;page=test.html">Test</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=map.html">Map</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=credits.html">Credits</a></li>
+    <li id="last"></li>
+  </ul>
+</div>
+<!-- end of nav div -->
+<div id="wrapper">
+<div id="content">
+<script type="text/javascript"><!--
+function array(n) { this.length = n; for (var x = 0; x < n; x++) this.x = null; }
+function rnd(max) { return parseInt(Math.floor(Math.random() * max + 1)); }
+
+function initialize() {
+ checked = false;
+ 
+ max = 31;
+ imgname = new array(max);
+ names = new array(3);
+  
+ imgname[1] = "Ferenc Liszt International Airport";
+ imgname[2] = "Planetarium";
+ imgname[3] = "National Theatre";
+ imgname[4] = "The Central Market Hall";
+ imgname[5] = "Hungarian National Museum";
+ imgname[6] = "Synagogue on Dohány Street";
+ imgname[7] = "Keleti Station";
+ imgname[8] = "Ferenc Puskás Stadium";
+ imgname[9] = "The Vajdahunyad Castle";
+ imgname[10] = "The Amusement Park";
+ imgname[11] = "Széchenyi Bath";
+ imgname[12] = "Zoo";
+ imgname[13] = "Museum of Fine Arts";
+ imgname[14] = "Heroes&rsquo; square";
+ imgname[15] = "The House of Terror";
+ imgname[16] = "State Opera House";
+ imgname[17] = "St. Stephen&rsquo;s Basilica";
+ imgname[18] = "The Vigadó (making marry)";
+ imgname[19] = "The Hungarian Academy of Sciences";
+ imgname[20] = "Széchenyi Chain Bridge";
+ imgname[21] = "Gellért-hegy";
+ imgname[22] = "Citadel";
+ imgname[23] = "Castle of Buda";
+ imgname[24] = "Buda Palace";
+ imgname[25] = "National Széchényi Library";
+ imgname[26] = "The Sándor palace";
+ imgname[27] = "Matthias Church";
+ imgname[28] = "The Fishermen&rsquo;s Bastion";
+ imgname[29] = "Margaret Island";
+ imgname[30] = "Parliament";
+ imgname[31] = "Nyugati Station";
+}
+
+function check() {
+ if (!checked)
+ {
+  checked = true;
+  var frm = document.getElementById('frm');
+  //disable check button
+  frm.btncheck.disabled = 'disabled';
+  
+  //images
+  for (i = 1; i <= 3; i++) {
+   if (names[i] == rand)
+    eval("document.getElementById('img' + parseInt(i)).src = 'gfx/correct.gif';");
+   else
+    eval("document.getElementById('img' + parseInt(i)).src = 'gfx/wrong.gif';");
+   }
+  //text
+  for (i = 1; i <= 3; i++) {
+    eval(
+     "if (frm.r" + parseInt(i) + ".checked)" +
+     "if (i == sol) document.getElementById('result').innerHTML = 'Congratulations, your answer is correct.';" +
+     " else document.getElementById('result').innerHTML = 'I&rsquo;m sorry but your answer is wrong.';"
+    );
+  }
+ }
+}
+
+function next() {
+  if (!checked)
+    document.getElementById('result').innerHTML = "Please check your answer!";
+  else //reload page
+    window.location = window.location;
+}
+
+function show() {
+  names = new array();
+  for (i = 1; i <= 3; i++) {
+    do {
+      nev = rnd(max - 1);
+      b = false;
+      if (i > 1) for (j = 1; j < i; j++) if (names[j] == nev) b = true;
+    } while (b);
+    names[i] = nev;
+  }
+  sol = rnd(3);
+  rand = names[sol];
+
+  id = parseInt(rand);
+  if (rand < 10) id = "0" + id;
+  
+  document.write("<table cellpadding='5' cellspacing='0' style='margin-top: 10px;'>");
+  document.write("<tr>");
+  document.write(" <td style='vertical-align: top;'>");
+  document.write("  <form id='frm'>");
+  document.write("   <b>Which sight can you see in the picture?</b>");
+  document.write("   <p>");
+  document.write("    <input type='radio' id='r1' name='R1' value='" + names[1] + "' checked='true' /><label for='r1'>" + imgname[names[1]] + " <img id='img1' src='gfx/spacer.gif' width='15' height='15' alt='' /></label><br />");
+  document.write("    <input type='radio' id='r2' name='R1' value='" + names[2] + "' /><label for='r2'>" + imgname[names[2]] + " <img id='img2' src='gfx/spacer.gif' width='15' height='15' alt='' /></label><br />");
+  document.write("    <input type='radio' id='r3' name='R1' value='" + names[3] + "' /><label for='r3'>" + imgname[names[3]] + " <img id='img3' src='gfx/spacer.gif' width='15' height='15' alt='' /></label>");
+  document.write("   </p>");
+  document.write("   <p><input type='button' id='btncheck' value='Check' onclick='check()' /> ");
+  document.write("      <input type='button' id='btnnext' value='Next' onclick='next()' /></p>");
+  document.write("  </form>");
+  document.write("  <div id='result'></div>");
+  document.write("  </td>");
+  document.write(" <td style='vertical-align: top;'>");
+  document.write("   <img src='data/pic/q" + id + ".jpg'  alt='' style='border: black 1px solid; margin-top: 3px;' />");
+  document.write(" </td>");
+  document.write(" </tr>");
+  document.write("</table>");
+}
+initialize();
+show();
+--></script></div>
+<!-- end of content div-->
+<div id="right">
+<div id="preload">
+<script type="text/javascript"><!--
+pr = "";
+for (i = 1; i <= 31; i++) {
+  if (i < 10) id = '0' + parseInt(i); else id = parseInt(i);
+  pr += ("<img src='data/pic/n" + id + ".jpg' alt='' />");
+}
+document.getElementById("preload").innerHTML = pr;
+--></script>
+</div>
+<script type="text/javascript"><!--
+  function rnd(max) {
+    s = Math.floor(Math.random() * max + 1);
+    if (s < 10) { s = "0" + parseInt(s); } else { s = parseInt(s); }
+    return s;
+  }
+  number1 = rnd(31);
+  number2 = rnd(31);
+  document.write("<p><a class='opacity' href='?lang=en&amp;page=sightseeing&amp;id=" + number1 + "'>Random place<br /><img src='data/pic/n" + number1 + ".jpg' width='200' height='86' alt='' /></a></p>");
+  document.write("<p><a class='opacity' href='?lang=en&amp;page=exercises&amp;id=" + number2 + "'>Random exercise<br /><img src='gfx/ex.png' width='200' height='68' alt='' /></a></p>");
+--></script>
+Choose!
+<br />
+<a id="a"><img id="i" src="data/pic/n00.jpg" width="200" height="86" alt="" /></a><script type="text/javascript"><!--
+function f(im,sub) {
+  //this function handles the left changing menu
+  document.getElementById('i').src = "data/pic/n" + im + ".jpg";
+  document.getElementById('a').href = "?lang=en&page=sightseeing&id=" + im;
+  document.getElementById('t').innerHTML = sub;
+}
+--></script>
+<p id="t">Choose a place!</p>
+<div id="list">
+<ul>
+ <li><span onmouseover="f('01','Ferenc Liszt Internati&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=01.html">01</a></span></li>
+ <li><span onmouseover="f('02','Planetarium')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=02.html">02</a></span></li>
+ <li><span onmouseover="f('03','National Theatre')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=03.html">03</a></span></li>
+ <li><span onmouseover="f('04','The Central Market Hall')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=04.html">04</a></span></li>
+ <li><span onmouseover="f('05','Hungarian National Museum')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=05.html">05</a></span></li>
+ <li><span onmouseover="f('06','Synagogue on Dohány St&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=06.html">06</a></span></li>
+ <li><span onmouseover="f('07','Keleti Station')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=07.html">07</a></span></li>
+ <li><span onmouseover="f('08','Ferenc Puskás Stadium')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=08.html">08</a></span></li>
+ <li><span onmouseover="f('09','The Vajdahunyad Castle')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=09.html">09</a></span></li>
+ <li><span onmouseover="f('10','The Amusement Park')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=10.html">10</a></span></li>
+ <li><span onmouseover="f('11','Széchenyi Bath')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=11.html">11</a></span></li>
+ <li><span onmouseover="f('12','Zoo')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=12.html">12</a></span></li>
+ <li><span onmouseover="f('13','Museum of Fine Arts')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=13.html">13</a></span></li>
+ <li><span onmouseover="f('14','Heroes&rsquo; square')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=14.html">14</a></span></li>
+ <li><span onmouseover="f('15','The House of Terror')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=15.html">15</a></span></li>
+ <li><span onmouseover="f('16','State Opera House')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=16.html">16</a></span></li>
+ <li><span onmouseover="f('17','St. Stephen&rsquo;s Ba&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=17.html">17</a></span></li>
+ <li><span onmouseover="f('18','The Vigadó (making marry)')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=18.html">18</a></span></li>
+ <li><span onmouseover="f('19','The Hungarian Academy &#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=19.html">19</a></span></li>
+ <li><span onmouseover="f('20','Széchenyi Chain Bridge')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=20.html">20</a></span></li>
+ <li><span onmouseover="f('21','Gellért-hegy')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=21.html">21</a></span></li>
+ <li><span onmouseover="f('22','Citadel')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=22.html">22</a></span></li>
+ <li><span onmouseover="f('23','Castle of Buda')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=23.html">23</a></span></li>
+ <li><span onmouseover="f('24','Buda Palace')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=24.html">24</a></span></li>
+ <li><span onmouseover="f('25','National Széchényi Lib&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=25.html">25</a></span></li>
+ <li><span onmouseover="f('26','The Sándor palace')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=26.html">26</a></span></li>
+ <li><span onmouseover="f('27','Matthias Church')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=27.html">27</a></span></li>
+ <li><span onmouseover="f('28','The Fishermen&rsquo;s &#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=28.html">28</a></span></li>
+ <li><span onmouseover="f('29','Margaret Island')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=29.html">29</a></span></li>
+ <li><span onmouseover="f('30','Parliament')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=30.html">30</a></span></li>
+ <li><span onmouseover="f('31','Nyugati Station')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=31.html">31</a></span></li>
+</ul>
+</div>
+<div id="misc">
+<a href="index.php%3Flang=en&amp;page=quiz&amp;id=14.html#" onclick="window.print();"><img src="gfx/print.png" width="80" height="15" alt="Print" title="Print the printer-ready page" /></a><br />
+<a href="http://validator.w3.org/check?verbose=1&amp;uri=referer" rel="external"><img src="gfx/xhtml11.png" width="80" height="15" alt="Valid XHTML 1.1" title="Valid XHTML 1.1" /></a>
+<div id="mainpage"><a href="index.php.html">Main page</a></div>
+<script type="text/javascript"><!--
+  document.write("<div id='contact'><a href='mailto:budapestjmg" + "&#64;" + "gmail.com'>Contact</a></div>");
+--></script>
+</div>
+<!-- clearer div -->
+<div class="clearer"></div>
+<!-- end of clearer div -->
+</div>
+<!-- end of right div --></div>
+<!-- end of wrapper div -->
+</div>
+<!-- end of sliding div -->
+</div>
+<!-- end of container div -->
+<script type="text/javascript">_uacct = "UA-869373-1"; urchinTracker();</script>
+</body>
+</html>

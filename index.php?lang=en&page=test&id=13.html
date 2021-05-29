@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<head>
+<title>Budapest - Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<link rel="stylesheet" type="text/css" href="css_math.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css_nav.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_body.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_right.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="css_handheld.css" media="handheld" />
+<link rel="shortcut icon" href="gfx/favicon.ico" />
+<script type="text/javascript" src="external.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+</head>
+<!--
+<body>
+-->
+<body>
+<div id="container">
+<div id="sliding">
+<div id="jump"><a href="index.php%3Flang=en&amp;page=test&amp;id=13.html#content">Jump to content.</a></div>
+<div id="nav">
+  <ul>
+    <li id="langhu"><a href="index.php%3Flang=hu&amp;page=test&amp;id=13.html" title="Magyar verzió &ndash; Hungarian version"></a></li>
+    <li><a href="index.php%3Flang=en&amp;page=sightseeing.html">Sightseeing</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=exercises.html">Exercises</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=gallery.html">Gallery</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=quiz.html">Quiz</a></li>
+    <li class="current">Test</li>
+    <li><a href="index.php%3Flang=en&amp;page=map.html">Map</a></li>
+    <li><a href="index.php%3Flang=en&amp;page=credits.html">Credits</a></li>
+    <li id="last"></li>
+  </ul>
+</div>
+<!-- end of nav div -->
+<div id="wrapper">
+<div id="content">
+<div>
+<script type="text/javascript">
+<!--
+var correctcount = 0;
+
+function load() {
+  count = 5;
+  T = new Array();
+  ResT = new Array(); 
+  T[1] = "In which district of Budapest is the Keleti Station located?";
+  T[2] = "8.";
+  T[3] = "1.";
+  T[4] = "6.";
+  T[5] = "Which underground line goes through the Keleti Station?";
+  T[6] = "line 2";
+  T[7] = "line 1";
+  T[8] = "line 3";
+  T[9] = "How long is the building of the Keleti Station?";
+  T[10] = "83 m";
+  T[11] = "100 m";
+  T[12] = "60 m";
+  T[13] = "When did the Nyugati Station open?";
+  T[14] = "in 1877";
+  T[15] = "in 1798";
+  T[16] = "in 1915";
+  T[17] = "Who was the architect of the Nyugati Station?";
+  T[18] = "August de Serres";
+  T[19] = "Frigyes Schulek";
+  T[20] = "James Watt";
+  T[21] = "How high is the hall of the Nyugati Station?";
+  T[22] = "25 m";
+  T[23] = "30 m";
+  T[24] = "42 m";
+  T[25] = "Where is the Sándor palace located?";
+  T[26] = "in the castle district";
+  T[27] = "in the Váci street";
+  T[28] = "in Óbuda";
+  T[29] = "How old is the Sándor palace this year?";
+  T[30] = "200 years old";
+  T[31] = "500 years old";
+  T[32] = "350 years old";
+  T[33] = "Who lives in the Sándor palace nowadays?";
+  T[34] = "the Hungarian president";
+  T[35] = "the Hungarian prime minister";
+  T[36] = "the president of the Hungarian parliament";
+  T[37] = "Who was the architect of the Fishermen&rsquo;s Bastion?";
+  T[38] = "Frigyes Schulek";
+  T[39] = "August de Serres";
+  T[40] = "James Watt";
+  T[41] = "How many towers does the Fishermen&rsquo;s Bastion have?";
+  T[42] = "7";
+  T[43] = "12";
+  T[44] = "25";
+  T[45] = "When was the Fishermen&rsquo;s Bastion built?";
+  T[46] = "in 1902";
+  T[47] = "in 1956";
+  T[48] = "in 1836";
+  T[49] = "Who converted the Dominican nuns&rsquo; houses into a monastery?";
+  T[50] = "King Béla IV";
+  T[51] = "Lajos II";
+  T[52] = "Ferdinand I";
+  T[53] = "Why is Margaret Island considered the most popular park in Budapest?";
+  T[54] = "Because it welcomes guests who look for tranquillity and recovery, plus offers plenty of sporting activities.";
+  T[55] = "Because there are no other parks in Budapest.";
+  T[56] = "Because more and more casinos are built in the area.";
+  T[57] = "Who designed the Synagogue on Dohány Street?";
+  T[58] = "Frigyes Feszl és Ludwig Förster";
+  T[59] = "Albert Schickedanz";
+  T[60] = "Károly Dávid és József Pelikán";
+  T[61] = "How many people does the synagogue have accomodation for?";
+  T[62] = "6000";
+  T[63] = "8500";
+  T[64] = "4000";
+  T[65] = "What kind of event is the establishment of Heroes&rsquo; Square associated with?";
+  T[66] = "A football match.";
+  T[67] = "The millenial celebration held in 1896.";
+  T[68] = "World War II.";
+  T[69] = "Whose statue was first done on Heroes&rsquo; Square?";
+  T[70] = "Gabriel archangel&rsquo;s.";
+  T[71] = "The one of Árpád.";
+  T[72] = "The one of Stephen I.";
+  T[73] = "How hot is the first spring of water which was found in the Széchenyi Medical Bath?";
+  T[74] = "74 °C";
+  T[75] = "58 °C";
+  T[76] = "70 °C";
+  T[77] = "When was the second spring of water discovered on the territory of the Széchenyi Medical Bath?";
+  T[78] = "1936";
+  T[79] = "1956";
+  T[80] = "1989";
+  T[81] = "Where can you find the Planetarium?";
+  T[82] = "Népliget";
+  T[83] = "City Park";
+  T[84] = "Gellért-mountain";
+  T[85] = "Which company made the technical appliances of the Planetarium?";
+  T[86] = "Zeiss Company";
+  T[87] = "Tirol Company";
+  T[88] = "Ludwig Company";
+  T[89] = "How many levels does the auditorium of the Hungarian State Opera House have?";
+  T[90] = "3";
+  T[91] = "2";
+  T[92] = "4";
+  T[93] = "What can you see on the fresco of the ceiling of the Opera House?";
+  T[94] = "Olympus";
+  T[95] = "Ballet performance";
+  T[96] = "Akropolis";
+  T[97] = "Who founded the Hungarian National Museum?";
+  T[98] = "Széchenyi Ferenc";
+  T[99] = "Széchényi István";
+  T[100] = "Deák Ferenc";
+  T[101] = "What is the style of the Hungarian National Museum?";
+  T[102] = "Classical";
+  T[103] = "Renaissance";
+  T[104] = "Secession";
+  T[105] = "What did Queen Elisabeth give to the opening of the zoo as a present?";
+  T[106] = "Giraffe";
+  T[107] = "Elephant";
+  T[108] = "Zebra";
+  T[109] = "How big is the area of the Zoo today?";
+  T[110] = "16 hectar";
+  T[111] = "18 hectar";
+  T[112] = "20 hectar";
+  T[113] = "When did the artillery of the Citadel get a job?";
+  T[114] = "At the birthday of the king";
+  T[115] = "At Easter time";
+  T[116] = "At Christmas time";
+  T[117] = "When was the Citadel started to built?";
+  T[118] = "1848";
+  T[119] = "1832";
+  T[120] = "1854";
+  T[121] = "Who built the very first version of the Buda Palace?";
+  T[122] = "Béla IV";
+  T[123] = "Mátyás Corvinus";
+  T[124] = "Maria Theresa";
+  T[125] = "During which ruler did the Buda Palace have its Zenith?";
+  T[126] = "Mátyás Corvinus";
+  T[127] = "Charles Robert of Angevin";
+  T[128] = "Béla IV";
+  T[129] = "When was the Hungarian Academy of Sciences founded?";
+  T[130] = "in 1825";
+  T[131] = "in 1849";
+  T[132] = "in 1870";
+  T[133] = "Who was not the director of the Hungarian Academy of Sciences?";
+  T[134] = "Béla Bartók";
+  T[135] = "Zoltán Kodály";
+  T[136] = "Loránd Eötvös";
+  T[137] = "By which square can you find the Museum of Fine Arts?";
+  T[138] = "by Heroes&rsquo; Square";
+  T[139] = "by Petőfi Square";
+  T[140] = "by Vörösmarty Square";
+  T[141] = "How many new pictures did the Museum of Fine Arts buy from the Esterházy family?";
+  T[142] = "more than 55000";
+  T[143] = "more than 65000";
+  T[144] = "more than 60000";
+  T[145] = "When was the National Széchényi Library opened to the public?";
+  T[146] = "in 1803";
+  T[147] = "in 1802";
+  T[148] = "in 1849";
+  T[149] = "Where can you find the National Széchényi Library at present?";
+  T[150] = "in the Buda Palace";
+  T[151] = "in the National Museum";
+  T[152] = "in the Museum of Fine Arts";
+  T[153] = "How high is the cupola of the the Parliament?";
+  T[154] = "96 m";
+  T[155] = "86 m";
+  T[156] = "106 m";
+  T[157] = "How many halls can you find in the Parliament?";
+  T[158] = "557";
+  T[159] = "678";
+  T[160] = "691";
+  T[161] = "Whose brainchild was the Széchenyi Chain Bridge?";
+  T[162] = "István Széchenyi&rsquo;s";
+  T[163] = "Ferenc Széchényi&rsquo;s";
+  T[164] = "Miklós Esterházy&rsquo;s";
+  T[165] = "Who designed the Széchenyi Chain Bridge?";
+  T[166] = "William Tierney Clark";
+  T[167] = "Adam Clark";
+  T[168] = "Imre Steindl";
+  T[169] = "In which style was St Stephen&rsquo;s Basilica built?";
+  T[170] = "Renaissance";
+  T[171] = "Classicist";
+  T[172] = "Gothic";
+  T[173] = "Which of these can you find in the St Stephen&rsquo;s Basilica&rsquo;s chapel?";
+  T[174] = "Sacred Right";
+  T[175] = "Holy Crown";
+  T[176] = "both";
+  T[177] = "Which of the followings is the House of Terror&rsquo;s address?";
+  T[178] = "60 Andrássy Boulevard";
+  T[179] = "5 Kossuth Square";
+  T[180] = "2 Dohány Street";
+  T[181] = "What can you find on Andrássy Boulevard 60 today?";
+  T[182] = "a museum";
+  T[183] = "a prison";
+  T[184] = "police station";
+  T[185] = "By which king was Matthias Church founded?";
+  T[186] = "Béla IV";
+  T[187] = "Matthias";
+  T[188] = "Charles I";
+  T[189] = "What is the official name of Matthias church?";
+  T[190] = "Church Of Our Lady";
+  T[191] = "Church of Matthias Corvin";
+  T[192] = "Church of Maria Magdalene";
+  T[193] = "Who was the designer of the Central Market Hall?";
+  T[194] = "Samu Pecz";
+  T[195] = "Adam Clark";
+  T[196] = "Miklós Ybl";
+  T[197] = "Which famous Hungarian author lived on Fővámház square?";
+  T[198] = "Zsigmond Móricz";
+  T[199] = "Mór Jókai";
+  T[200] = "Kálmán Mikszáth";
+  T[201] = "When was the Buda palace extended to its present-day shape?";
+  T[202] = "at the end of the 1800s";
+  T[203] = "at the end of 1900s";
+  T[204] = "at the end of the 1700";
+  T[205] = "With how many meters was Ferenc Liszt International Airport's runways extended from the beginning?";
+  T[206] = "1010";
+  T[207] = "500";
+  T[208] = "3010";
+  T[209] = "What can be seen on the summit of Gellért Hill?";
+  T[210] = "Liberation Monument";
+  T[211] = "Statue of Gellért";
+  T[212] = "Gellért Hotel";
+  T[213] = "When was the construction work of the National Theatre finished?";
+  T[214] = "in December, 2001";
+  T[215] = "in March, 2002";
+  T[216] = "in January, 2002";
+  T[217] = "How long was Vajdahunya Castle being built?";
+  T[218] = "12";
+  T[219] = "13";
+  T[220] = "15";
+  T[221] = "How large is the Amusement Park's territory?";
+  T[222] = "65000 m<sup>2</sup>";
+  T[223] = "6500 m<sup>2</sup>";
+  T[224] = "650000 m<sup>2</sup>";
+  T[225] = "When did Liszt Ferenc give a concert in the Vigadó?";
+  T[226] = "in 1839";
+  T[227] = "in 1833";
+  T[228] = "in 1849";
+  max = 57;
+
+  ResT[0] = "Don&rsquo;t be disappointed. But why don&rsquo;t you go on our visual tour once more?";
+  ResT[1] = "You had just bad luck. Try again.";
+  ResT[2] = "Not bad.";
+  ResT[3] = "The next quiz should be child&rsquo;s play.";
+  ResT[4] = "This result is very good for a foreigner. Congratulations!";
+  ResT[5] = "Excellent. Well done!";
+}
+
+function check(rb) {
+  var frm = document.getElementById('frm');
+  r = "f" + parseInt(rb);
+  eval(
+   "for (i = 0; i < frm." + r + ".length; i++)" +
+   " if (frm." + r + "[i].checked)" +
+   "   { input = frm." + r + "[i].value; }"
+  );
+  document.getElementById("right" + parseInt(rb)).src='gfx/correct.gif';
+  
+  answers[rb] = input;
+  if (input == 1) {
+    correctcount += 1;
+    document.getElementById("dd" + parseInt(rb)).style.borderLeft = '#008400 5px solid';
+  } else {
+  document.getElementById("dd" + parseInt(rb)).style.borderLeft = '#FF0000 5px solid'; }
+}
+
+function checkall() {
+ function abc(x) {
+  switch (x) {
+   case 1: return "A"; break;
+   case 2: return "B"; break;
+   case 3: return "C"; break;
+  }
+ }
+  
+ answers = new Array();  
+ correctcount = 0;
+ for (x = 1; x <= count; x++) {
+  check(x);
+ }
+ res = "<p>";
+ res += "Your result is " + parseInt(correctcount) + "/" + parseInt(count) + ". " + ResT[correctcount] + " <br />";
+ res += "The correct answers are: <br />";
+ for (x = 1; x <= count; x++) {
+  if (answers[x] == 0)
+   res += "<span class='correct'>" + x + ". " + abc(correct[x]) + "</span>";
+  else
+   res += "<span class='wrong'>" + x + ". " + abc(correct[x]) + "</span>";
+  if (x != count) res += ", ";
+ }
+ res += "</p>";
+ document.getElementById('testresult').innerHTML = res;
+ var frm = document.getElementById('frm');
+ //disable check button
+ frm.btncheck.disabled = 'disabled';
+ frm.btnnext.disabled = false;
+}
+
+function rnd(max) { return parseInt(Math.floor(Math.random() * max + 1)); }
+
+function show() {
+ p = new Array();
+ correct = new Array();
+ var q;
+ document.write("<form id='frm' action='?'>");
+ document.write(" <dl>");
+ for (i = 1; i <= count; i++) {
+  do {
+   //q identifies the serial number of the question. so the question can be found at (q-1)*4+1
+   q = rnd(max);
+   b = false;
+   if (i > 1) for (j = 1; j < i; j++) if (p[j] == q) b = true;
+  } while (b);
+  p[i] = q;
+  //print the question
+  document.write("  <dt>" + parseInt(i) + ". " + T[(q - 1) * 4 + 1] + "</dt>");
+  document.write("   <dd id='dd" + parseInt(i) + "'>");
+  //choosing the place of the correct answer
+  correct[i] = rnd(3);
+  w = 1;
+  for (j = 1; j <= 3; j++) {
+    if  (j != correct[i]) {
+      //choosing a different random number
+      var k;
+      do { k = rnd(3); } while ((k == 1) || (k == prev));
+      //saving the number
+      var prev = k;
+      //printing that question
+      document.write("    <div><input type='radio' name='f" + i + "' id='f" + parseInt(i) + parseInt(j) + "' value='0'");
+      if (j == 1) document.write(" checked='checked' ");
+      document.write(" /><label for='f" + parseInt(i) + parseInt(k) + "'>" + T[(q - 1) * 4 + k + 1] + "<img src='gfx/spacer.gif' alt='' id='wrong" + parseInt(i) + parseInt(w++) + "' /></label></div>");
+    } else {
+      document.write("    <div><input type='radio' name='f" + i + "' id='f" + parseInt(i) + parseInt(j) + "' value='1'");
+      if (j == 1) document.write(" checked='checked' ");
+      document.write(" /><label for='f" + parseInt(i) + parseInt(correct[i]) + "'>" + T[(q - 1) * 4 + 2] + "<img src='gfx/spacer.gif' alt='' id='right" + parseInt(i) + "' /></label></div>");
+    }
+  }
+  document.write("   </dd>");
+ }
+ document.write("  </dl>");
+ document.write("<div>");
+ document.write("<input id='btncheck' style='width: 100px;' type='button' onclick='checkall();' value='Check' /> ");
+ document.write("<input id='btnnext' style='width: 100px;' disabled='disabled' type='button' onclick='next();' value='Next' />");
+ document.write("</div>");
+ document.write("</form>");
+}
+
+function next() {
+ location = location;
+}
+
+load();
+show();
+-->
+</script>
+<div id="testresult"><p>&nbsp;<br />&nbsp;<br />&nbsp;</p></div>
+</div></div>
+<!-- end of content div-->
+<div id="right">
+<div id="preload">
+<script type="text/javascript"><!--
+pr = "";
+for (i = 1; i <= 31; i++) {
+  if (i < 10) id = '0' + parseInt(i); else id = parseInt(i);
+  pr += ("<img src='data/pic/n" + id + ".jpg' alt='' />");
+}
+document.getElementById("preload").innerHTML = pr;
+--></script>
+</div>
+<script type="text/javascript"><!--
+  function rnd(max) {
+    s = Math.floor(Math.random() * max + 1);
+    if (s < 10) { s = "0" + parseInt(s); } else { s = parseInt(s); }
+    return s;
+  }
+  number1 = rnd(31);
+  number2 = rnd(31);
+  document.write("<p><a class='opacity' href='?lang=en&amp;page=sightseeing&amp;id=" + number1 + "'>Random place<br /><img src='data/pic/n" + number1 + ".jpg' width='200' height='86' alt='' /></a></p>");
+  document.write("<p><a class='opacity' href='?lang=en&amp;page=exercises&amp;id=" + number2 + "'>Random exercise<br /><img src='gfx/ex.png' width='200' height='68' alt='' /></a></p>");
+--></script>
+Choose!
+<br />
+<a id="a"><img id="i" src="data/pic/n00.jpg" width="200" height="86" alt="" /></a><script type="text/javascript"><!--
+function f(im,sub) {
+  //this function handles the left changing menu
+  document.getElementById('i').src = "data/pic/n" + im + ".jpg";
+  document.getElementById('a').href = "?lang=en&page=sightseeing&id=" + im;
+  document.getElementById('t').innerHTML = sub;
+}
+--></script>
+<p id="t">Choose a place!</p>
+<div id="list">
+<ul>
+ <li><span onmouseover="f('01','Ferenc Liszt Internati&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=01.html">01</a></span></li>
+ <li><span onmouseover="f('02','Planetarium')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=02.html">02</a></span></li>
+ <li><span onmouseover="f('03','National Theatre')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=03.html">03</a></span></li>
+ <li><span onmouseover="f('04','The Central Market Hall')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=04.html">04</a></span></li>
+ <li><span onmouseover="f('05','Hungarian National Museum')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=05.html">05</a></span></li>
+ <li><span onmouseover="f('06','Synagogue on Dohány St&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=06.html">06</a></span></li>
+ <li><span onmouseover="f('07','Keleti Station')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=07.html">07</a></span></li>
+ <li><span onmouseover="f('08','Ferenc Puskás Stadium')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=08.html">08</a></span></li>
+ <li><span onmouseover="f('09','The Vajdahunyad Castle')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=09.html">09</a></span></li>
+ <li><span onmouseover="f('10','The Amusement Park')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=10.html">10</a></span></li>
+ <li><span onmouseover="f('11','Széchenyi Bath')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=11.html">11</a></span></li>
+ <li><span onmouseover="f('12','Zoo')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=12.html">12</a></span></li>
+ <li><span onmouseover="f('13','Museum of Fine Arts')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=13.html">13</a></span></li>
+ <li><span onmouseover="f('14','Heroes&rsquo; square')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=14.html">14</a></span></li>
+ <li><span onmouseover="f('15','The House of Terror')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=15.html">15</a></span></li>
+ <li><span onmouseover="f('16','State Opera House')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=16.html">16</a></span></li>
+ <li><span onmouseover="f('17','St. Stephen&rsquo;s Ba&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=17.html">17</a></span></li>
+ <li><span onmouseover="f('18','The Vigadó (making marry)')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=18.html">18</a></span></li>
+ <li><span onmouseover="f('19','The Hungarian Academy &#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=19.html">19</a></span></li>
+ <li><span onmouseover="f('20','Széchenyi Chain Bridge')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=20.html">20</a></span></li>
+ <li><span onmouseover="f('21','Gellért-hegy')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=21.html">21</a></span></li>
+ <li><span onmouseover="f('22','Citadel')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=22.html">22</a></span></li>
+ <li><span onmouseover="f('23','Castle of Buda')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=23.html">23</a></span></li>
+ <li><span onmouseover="f('24','Buda Palace')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=24.html">24</a></span></li>
+ <li><span onmouseover="f('25','National Széchényi Lib&#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=25.html">25</a></span></li>
+ <li><span onmouseover="f('26','The Sándor palace')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=26.html">26</a></span></li>
+ <li><span onmouseover="f('27','Matthias Church')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=27.html">27</a></span></li>
+ <li><span onmouseover="f('28','The Fishermen&rsquo;s &#8230;')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=28.html">28</a></span></li>
+ <li><span onmouseover="f('29','Margaret Island')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=29.html">29</a></span></li>
+ <li><span onmouseover="f('30','Parliament')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=30.html">30</a></span></li>
+ <li><span onmouseover="f('31','Nyugati Station')"><a href="index.php%3Flang=en&amp;page=sightseeing&amp;id=31.html">31</a></span></li>
+</ul>
+</div>
+<div id="misc">
+<a href="index.php%3Flang=en&amp;page=test&amp;id=13.html#" onclick="window.print();"><img src="gfx/print.png" width="80" height="15" alt="Print" title="Print the printer-ready page" /></a><br />
+<a href="http://validator.w3.org/check?verbose=1&amp;uri=referer" rel="external"><img src="gfx/xhtml11.png" width="80" height="15" alt="Valid XHTML 1.1" title="Valid XHTML 1.1" /></a>
+<div id="mainpage"><a href="index.php.html">Main page</a></div>
+<script type="text/javascript"><!--
+  document.write("<div id='contact'><a href='mailto:budapestjmg" + "&#64;" + "gmail.com'>Contact</a></div>");
+--></script>
+</div>
+<!-- clearer div -->
+<div class="clearer"></div>
+<!-- end of clearer div -->
+</div>
+<!-- end of right div --></div>
+<!-- end of wrapper div -->
+</div>
+<!-- end of sliding div -->
+</div>
+<!-- end of container div -->
+<script type="text/javascript">_uacct = "UA-869373-1"; urchinTracker();</script>
+</body>
+</html>

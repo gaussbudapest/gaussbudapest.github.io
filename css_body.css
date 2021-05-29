@@ -1,0 +1,413 @@
+/* stylesheet of the document body */
+body {
+  margin: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.8em !important;
+}
+
+#container {
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  border-style: solid;
+  border-color: #B2B2B2;
+  border-width: 0px 1px 0px 1px;
+  background: url("gfx/nav_bg.png") top left repeat-x;
+}
+
+#wrapper {
+  background: white url("gfx/left_stripes.gif") no-repeat bottom left;
+  width: 1002px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#content {
+  width: 715px;
+  text-align: justify;
+  line-height: 1.5em;
+  float: left;
+  /* values for IE 5-6 */
+  margin: 0px 0px 0px 21px;
+  padding: 8px 15px 0px 0px;
+}
+
+/* for standard compliant browsers (Firefox, Opera, IE7, Konqueror) */
+html>body #content {
+  margin: 0 0 0 45px;
+  padding: 0px 15px 0px 0px;
+}
+
+#main, #sightseeing, #exercises, #credits {
+  margin: 8px 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#exercises {
+  margin-bottom: 10px;
+}
+
+#exercises img {
+  border-width: 0px;
+}
+
+#exercises p {
+  margin: 4px 0 4px 0;
+}
+
+#exercises table {
+  padding: 4px 0 4px 0;
+}
+
+img.leftfloat {
+  margin-top: 5px;
+  margin-right: 5px;
+  float: left;
+}
+
+img.rightfloat {
+  margin-top: 5px;
+  margin-left: 5px;
+  float: right;
+}
+
+img.nofloat {
+  float: none;
+}
+
+img.centered  {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sightseeing img.nofloat, #sightseeing img.centered, #sightseeing img.rightfloat, #sightseeing img.leftfloat {
+  border: black 1px solid;
+}
+
+h1 {
+  font-family: Garamond;
+  letter-spacing: 1px;
+  font-size: 2em;
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 15px 0 5px 0;  
+}
+
+a:link, a:visited, a:active {
+  color: #009;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.left, .right {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.left {
+  float: left;
+  text-align: left;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.left a:link, .left a:visited, .left a:active {
+  display: block;
+  background: url("gfx/left_arrow.png") no-repeat;
+}
+
+.left a:hover {
+  background: url("gfx/left_arrow.png") right top no-repeat;
+}
+
+.right a:link, .right a:visited, .right a:active {
+  display: block;
+  background: url("gfx/right_arrow.png") no-repeat;
+}
+
+.right a:hover {
+  background: url("gfx/right_arrow.png") right top no-repeat;
+}
+
+.sidelink {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: Garamond;
+}
+
+img {
+  border: 0;
+}
+
+.subnav {
+  clear: both;
+}
+
+.subnav table {
+  margin-top: 10px;
+}
+
+p {
+  margin: 12px 0 12px 0;
+  padding: 0px;
+}
+
+dt {
+  padding: 5px 0 0 0;
+  font-weight: bold;
+}
+
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+#result {
+  text-align: center;
+}
+
+#testresult .correct {
+  font-weight: bold;
+  color: #DD1A1A;
+}
+
+#testresult .wrong {
+  font-weight: bold;
+  color: #118814;
+}
+
+abbr {
+  padding-bottom: 0px;
+  border-bottom: black 1px dotted;
+  cursor: help;
+}
+
+a abbr {
+  padding-bottom: 0px;
+  border-bottom: #009 1px dotted;
+}
+
+abbr a:hover  {
+  text-decoration: none;
+}
+
+#preload {
+  display: none;
+}
+
+table#galery {
+  margin: 10px 0px 0px 0px;
+}
+
+table#galery tr {
+  vertical-align: middle;
+}
+
+td.galleft {
+  width: 66px;
+  height: 36px;
+  text-align: right;
+}
+
+td.galright {
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+#galbox {
+  width: 410px;
+  padding-top: 40px;
+  vertical-align: top;
+}
+
+#galbox img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: black 1px solid;
+}
+
+#galbox h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+#galery {
+  width: 317px;
+}
+
+td.galboxleft {
+  text-align: left;
+}
+
+td.galboxright {
+  text-align: right;
+}
+
+#galtable {
+  border-top: gray 1px solid;
+  border-bottom: gray 1px solid;  
+  margin-bottom: 40px;
+}
+
+#map {
+  margin-top: 10px;
+}
+
+ol {
+  list-style: none;
+  padding: 0px;
+  margin: 0 0 0 30px;
+}
+
+#map li {
+  float: left;
+  width: 222px;
+}
+
+#map object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+#credits h2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  padding: 0;
+}
+
+#credits #wai, #credits #section508 {
+  display: none;
+}
+
+#credits #bibliography ul {
+  padding: 0 0 0 15px;
+  margin: 0 0 10px 5px;
+}
+
+#credits #bibliography li {
+  list-style-type: square;
+}
+
+html>body #credits #bibliography ul li:before {
+  content: "\0020 \0020 \0020 \00BB \0020";
+  color: black;
+  list-style-type: none;
+}
+
+html>body #credits #bibliography ul {
+  padding: 0px;
+  margin: 0 0 10px 0;
+}
+
+html>body #credits #bibliography li {
+  list-style-type: none;
+}
+
+.teammate {
+  margin-top: 10px;
+}
+
+.teammate img {
+  border: #B2B2B2 1px solid;
+  display: block;
+}
+
+.teammate h3 {
+  margin: 0px;
+  letter-spacing: 1px;
+}
+
+.odd img {
+  float: left;
+  margin-right: 5px;
+}
+
+.even img {
+  float: right;
+  margin-left: 5px;
+}
+
+.odd h3, .odd .title {
+  background: url("gfx/horizontal_line_right.gif") bottom right no-repeat;
+}
+
+.even h3, .even .title {
+  background: url("gfx/horizontal_line_right.gif") bottom left no-repeat;
+}
+
+#crew {
+  margin-top: 10px;
+}
+
+.clearer {
+  clear: both;
+}
+
+#frm img {
+  border-width: 0px;
+  padding-left: 3px;
+}
+
+#frm dd {
+  border-left: white 5px solid;
+}
+
+/* DEVELOPMENT SECTION */
+textarea {
+  font-family: Verdana;
+  font-size: 0.9em;
+  color: black;
+  border: black 1px solid;
+  padding-left: 2px;
+}
+
+textarea:hover {
+  border: gray 1px solid;
+}
+
+textarea:focus {
+  color: black;
+  border: black 1px solid;
+}
+
+.warning {
+  color: red;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.existing {
+  text-decoration: underline;
+}
+
+dd img {
+  border: black 1px solid;
+}
+
+#detailed dt {
+  text-decoration: underline;
+}
+
+dt a {
+  font-weight: normal;
+}
+/* END DEV */

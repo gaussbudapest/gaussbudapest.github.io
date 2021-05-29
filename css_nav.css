@@ -1,0 +1,110 @@
+/* stylesheet of the navigation */
+#jump {
+  display: none;
+}
+
+#nav {
+  border-left: black 1px solid;
+  border-right: black 1px solid;
+  width: 1000px;
+  height: 30px;
+}
+
+#nav a, #nav .current {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Garamond, Verdana, Arial, sans-serif;
+  font-size: 1.25em;
+  display: block;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#nav a:link, #nav a:visited, #nav a:active {
+  background: url("gfx/nav_btn.png") top right;
+  color: #FFF;
+}
+
+#nav a:hover {
+  background: url("gfx/nav_btn.png") center right;
+}
+
+#nav .current{
+  background: url("gfx/nav_btn.png") bottom right;
+  color: #000;
+}
+
+#nav li {
+  display: block;
+  float: left;
+  width: 106px;
+  text-align: center;
+}
+
+#nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li#langhu, li#langen {
+  width: 29px;
+}
+
+#nav #last {
+  width: 1px;
+  height: 30px;
+  background: url("gfx/nav_last.png") top right;
+}
+
+#nav #langhu a:link, #nav #langhu a:visited, #nav #langen a:active {
+  background: url("gfx/nav_hu.png");
+}
+
+#nav #langen a:link, #nav #langen a:visited, #nav #langen a:active {
+  background: url("gfx/nav_en.png");
+}
+
+#nav #langhu a:hover, #nav #langen a:hover {
+  background-position: top right;
+}
+
+/* subnavigation */
+#subnav ul {
+  padding: 0px;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  height: 42px;
+}
+
+#subnav a {
+  display: block;
+  height: 42px;
+}
+
+#subnav li {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#subnav ul li.link {
+  width: 601px;
+  text-align: center;
+}
+
+#subnav ul li.link a {
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  padding-top: 10px;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: Garamond;
+}

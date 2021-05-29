@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu">
+<head>
+<title>Budapest - Kvíz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<link rel="stylesheet" type="text/css" href="css_math.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css_nav.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_body.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_right.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css_print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="css_handheld.css" media="handheld" />
+<link rel="shortcut icon" href="gfx/favicon.ico" />
+<script type="text/javascript" src="external.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+</head>
+<!--
+<body>
+-->
+<body>
+<div id="container">
+<div id="sliding">
+<div id="jump"><a href="index.php%3Flang=hu&amp;page=quiz&amp;id=15.html#content">Jump to content.</a></div>
+<div id="nav">
+  <ul>
+    <li id="langen"><a href="index.php%3Flang=en&amp;page=quiz&amp;id=15.html" title="English version &ndash; Angol verzió"></a></li>
+    <li><a href="index.php%3Flang=hu&amp;page=sightseeing.html">Körséta</a></li>
+    <li><a href="index.php%3Flang=hu&amp;page=exercises.html">Feladatok</a></li>
+    <li><a href="index.php%3Flang=hu&amp;page=gallery.html">Galéria</a></li>
+    <li class="current">Kvíz</li>
+    <li><a href="index.php%3Flang=hu&amp;page=test.html">Teszt</a></li>
+    <li><a href="index.php%3Flang=hu&amp;page=map.html">Térkép</a></li>
+    <li><a href="index.php%3Flang=hu&amp;page=credits.html">Készítők</a></li>
+    <li id="last"></li>
+  </ul>
+</div>
+<!-- end of nav div -->
+<div id="wrapper">
+<div id="content">
+<script type="text/javascript"><!--
+function array(n) { this.length = n; for (var x = 0; x < n; x++) this.x = null; }
+function rnd(max) { return parseInt(Math.floor(Math.random() * max + 1)); }
+
+function initialize() {
+ checked = false;
+ 
+ max = 31;
+ imgname = new array(max);
+ names = new array(3);
+  
+ imgname[1] = "Liszt Ferenc Nemzetközi Repülőtér";
+ imgname[2] = "Planetárium - TIT Budapesti Planetárium";
+ imgname[3] = "Nemzeti Színház";
+ imgname[4] = "Központi Vásárcsarnok - Nagyvásárcsarnok";
+ imgname[5] = "Magyar Nemzeti Múzeum";
+ imgname[6] = "Dohány utcai Zsinagóga";
+ imgname[7] = "Keleti pályaudvar";
+ imgname[8] = "Puskás Ferenc Stadion";
+ imgname[9] = "Vajdahunyad vára";
+ imgname[10] = "Vidámpark - Holnemvolt Park";
+ imgname[11] = "Széchenyi Gyógyfürdő";
+ imgname[12] = "Fővárosi Állat- és Növénykert";
+ imgname[13] = "Szépművészeti Múzeum";
+ imgname[14] = "Hősök tere";
+ imgname[15] = "Terror háza múzeum";
+ imgname[16] = "Magyar Állami Operaház";
+ imgname[17] = "Szent István Bazilika";
+ imgname[18] = "Pesti Vigadó";
+ imgname[19] = "Magyar Tudományos Akadémia";
+ imgname[20] = "Széchenyi Lánchíd";
+ imgname[21] = "Gellért-hegy";
+ imgname[22] = "Citadella";
+ imgname[23] = "Budai Várnegyed";
+ imgname[24] = "Budai Királyi Palota - Budavári Palota";
+ imgname[25] = "Országos Széchényi Könyvtár";
+ imgname[26] = "Sándor-palota";
+ imgname[27] = "Mátyás-templom - Budavári Nagyboldogasszony-templom";
+ imgname[28] = "Halászbástya";
+ imgname[29] = "Margit-sziget";
+ imgname[30] = "Parlament";
+ imgname[31] = "Nyugati pályaudvar";
+}
+
+function check() {
+ if (!checked)
+ {
+  checked = true;
+  var frm = document.getElementById('frm');
+  //disable check button
+  frm.btncheck.disabled = 'disabled';
+  
+  //images
+  for (i = 1; i <= 3; i++) {
+   if (names[i] == rand)
+    eval("document.getElementById('img' + parseInt(i)).src = 'gfx/correct.gif';");
+   else
+    eval("document.getElementById('img' + parseInt(i)).src = 'gfx/wrong.gif';");
+   }
+  //text
+  for (i = 1; i <= 3; i++) {
+    eval(
+     "if (frm.r" + parseInt(i) + ".checked)" +
+     "if (i == sol) document.getElementById('result').innerHTML = 'Gratulálok, a válasz helyes.';" +
+     " else document.getElementById('result').innerHTML = 'Sajnos a válasz helytelen.';"
+    );
+  }
+ }
+}
+
+function next() {
+  if (!checked)
+    document.getElementById('result').innerHTML = "Ellenőrizd a válaszod!";
+  else //reload page
+    window.location = window.location;
+}
+
+function show() {
+  names = new array();
+  for (i = 1; i <= 3; i++) {
+    do {
+      nev = rnd(max - 1);
+      b = false;
+      if (i > 1) for (j = 1; j < i; j++) if (names[j] == nev) b = true;
+    } while (b);
+    names[i] = nev;
+  }
+  sol = rnd(3);
+  rand = names[sol];
+
+  id = parseInt(rand);
+  if (rand < 10) id = "0" + id;
+  
+  document.write("<table cellpadding='5' cellspacing='0' style='margin-top: 10px;'>");
+  document.write("<tr>");
+  document.write(" <td style='vertical-align: top;'>");
+  document.write("  <form id='frm'>");
+  document.write("   <b>Melyik nevezetesség látható a képen?</b>");
+  document.write("   <p>");
+  document.write("    <input type='radio' id='r1' name='R1' value='" + names[1] + "' checked='true' /><label for='r1'>" + imgname[names[1]] + " <img id='img1' src='gfx/spacer.gif' width='15' height='15' alt='' /></label><br />");
+  document.write("    <input type='radio' id='r2' name='R1' value='" + names[2] + "' /><label for='r2'>" + imgname[names[2]] + " <img id='img2' src='gfx/spacer.gif' width='15' height='15' alt='' /></label><br />");
+  document.write("    <input type='radio' id='r3' name='R1' value='" + names[3] + "' /><label for='r3'>" + imgname[names[3]] + " <img id='img3' src='gfx/spacer.gif' width='15' height='15' alt='' /></label>");
+  document.write("   </p>");
+  document.write("   <p><input type='button' id='btncheck' value='Ellenőrzés' onclick='check()' /> ");
+  document.write("      <input type='button' id='btnnext' value='Következő' onclick='next()' /></p>");
+  document.write("  </form>");
+  document.write("  <div id='result'></div>");
+  document.write("  </td>");
+  document.write(" <td style='vertical-align: top;'>");
+  document.write("   <img src='data/pic/q" + id + ".jpg'  alt='' style='border: black 1px solid; margin-top: 3px;' />");
+  document.write(" </td>");
+  document.write(" </tr>");
+  document.write("</table>");
+}
+initialize();
+show();
+--></script></div>
+<!-- end of content div-->
+<div id="right">
+<div id="preload">
+<script type="text/javascript"><!--
+pr = "";
+for (i = 1; i <= 31; i++) {
+  if (i < 10) id = '0' + parseInt(i); else id = parseInt(i);
+  pr += ("<img src='data/pic/n" + id + ".jpg' alt='' />");
+}
+document.getElementById("preload").innerHTML = pr;
+--></script>
+</div>
+<script type="text/javascript"><!--
+  function rnd(max) {
+    s = Math.floor(Math.random() * max + 1);
+    if (s < 10) { s = "0" + parseInt(s); } else { s = parseInt(s); }
+    return s;
+  }
+  number1 = rnd(31);
+  number2 = rnd(31);
+  document.write("<p><a class='opacity' href='?lang=hu&amp;page=sightseeing&amp;id=" + number1 + "'>Véletlen helyszín<br /><img src='data/pic/n" + number1 + ".jpg' width='200' height='86' alt='' /></a></p>");
+  document.write("<p><a class='opacity' href='?lang=hu&amp;page=exercises&amp;id=" + number2 + "'>Véletlen feladat<br /><img src='gfx/ex.png' width='200' height='68' alt='' /></a></p>");
+--></script>
+Válassz!
+<br />
+<a id="a"><img id="i" src="data/pic/n00.jpg" width="200" height="86" alt="" /></a><script type="text/javascript"><!--
+function f(im,sub) {
+  //this function handles the left changing menu
+  document.getElementById('i').src = "data/pic/n" + im + ".jpg";
+  document.getElementById('a').href = "?lang=hu&page=sightseeing&id=" + im;
+  document.getElementById('t').innerHTML = sub;
+}
+--></script>
+<p id="t">Válassz egy helyszínt!</p>
+<div id="list">
+<ul>
+ <li><span onmouseover="f('01','Liszt Ferenc Nemzetköz&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=01.html">01</a></span></li>
+ <li><span onmouseover="f('02','Planetárium - TIT Buda&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=02.html">02</a></span></li>
+ <li><span onmouseover="f('03','Nemzeti Színház')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=03.html">03</a></span></li>
+ <li><span onmouseover="f('04','Központi Vásárcsarnok &#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=04.html">04</a></span></li>
+ <li><span onmouseover="f('05','Magyar Nemzeti Múzeum')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=05.html">05</a></span></li>
+ <li><span onmouseover="f('06','Dohány utcai Zsinagóga')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=06.html">06</a></span></li>
+ <li><span onmouseover="f('07','Keleti pályaudvar')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=07.html">07</a></span></li>
+ <li><span onmouseover="f('08','Puskás Ferenc Stadion')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=08.html">08</a></span></li>
+ <li><span onmouseover="f('09','Vajdahunyad vára')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=09.html">09</a></span></li>
+ <li><span onmouseover="f('10','Vidámpark - Holnemvolt&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=10.html">10</a></span></li>
+ <li><span onmouseover="f('11','Széchenyi Gyógyfürdő')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=11.html">11</a></span></li>
+ <li><span onmouseover="f('12','Fővárosi Állat- és Növ&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=12.html">12</a></span></li>
+ <li><span onmouseover="f('13','Szépművészeti Múzeum')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=13.html">13</a></span></li>
+ <li><span onmouseover="f('14','Hősök tere')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=14.html">14</a></span></li>
+ <li><span onmouseover="f('15','Terror háza múzeum')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=15.html">15</a></span></li>
+ <li><span onmouseover="f('16','Magyar Állami Operaház')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=16.html">16</a></span></li>
+ <li><span onmouseover="f('17','Szent István Bazilika')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=17.html">17</a></span></li>
+ <li><span onmouseover="f('18','Pesti Vigadó')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=18.html">18</a></span></li>
+ <li><span onmouseover="f('19','Magyar Tudományos Akad&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=19.html">19</a></span></li>
+ <li><span onmouseover="f('20','Széchenyi Lánchíd')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=20.html">20</a></span></li>
+ <li><span onmouseover="f('21','Gellért-hegy')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=21.html">21</a></span></li>
+ <li><span onmouseover="f('22','Citadella')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=22.html">22</a></span></li>
+ <li><span onmouseover="f('23','Budai Várnegyed')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=23.html">23</a></span></li>
+ <li><span onmouseover="f('24','Budai Királyi Palota -&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=24.html">24</a></span></li>
+ <li><span onmouseover="f('25','Országos Széchényi Kön&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=25.html">25</a></span></li>
+ <li><span onmouseover="f('26','Sándor-palota')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=26.html">26</a></span></li>
+ <li><span onmouseover="f('27','Mátyás-templom - Budav&#8230;')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=27.html">27</a></span></li>
+ <li><span onmouseover="f('28','Halászbástya')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=28.html">28</a></span></li>
+ <li><span onmouseover="f('29','Margit-sziget')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=29.html">29</a></span></li>
+ <li><span onmouseover="f('30','Parlament')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=30.html">30</a></span></li>
+ <li><span onmouseover="f('31','Nyugati pályaudvar')"><a href="index.php%3Flang=hu&amp;page=sightseeing&amp;id=31.html">31</a></span></li>
+</ul>
+</div>
+<div id="misc">
+<a href="index.php%3Flang=hu&amp;page=quiz&amp;id=15.html#" onclick="window.print();"><img src="gfx/print.png" width="80" height="15" alt="Nyomtatás" title="Nyomtatókész oldal nyomtatása" /></a><br />
+<a href="http://validator.w3.org/check?verbose=1&amp;uri=referer" rel="external"><img src="gfx/xhtml11.png" width="80" height="15" alt="Érvényes XHTML 1.1" title="Érvényes XHTML 1.1" /></a>
+<div id="mainpage"><a href="index.php%3Flang=hu.html">Főoldal</a></div>
+<script type="text/javascript"><!--
+  document.write("<div id='contact'><a href='mailto:budapestjmg" + "&#64;" + "gmail.com'>Kapcsolat</a></div>");
+--></script>
+</div>
+<!-- clearer div -->
+<div class="clearer"></div>
+<!-- end of clearer div -->
+</div>
+<!-- end of right div --></div>
+<!-- end of wrapper div -->
+</div>
+<!-- end of sliding div -->
+</div>
+<!-- end of container div -->
+<script type="text/javascript">_uacct = "UA-869373-1"; urchinTracker();</script>
+</body>
+</html>

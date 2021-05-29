@@ -1,0 +1,195 @@
+/* stylesheet for printers */
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  text-align: justify;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+h1 {
+  font-family: Garamond;
+  letter-spacing: 1px;
+  font-size: 2em;
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: #009;
+  text-decoration: underline;
+}
+
+#exercises img {
+  border-width: 0px;
+}
+
+#exercises img.draw {
+  display: block;
+  margin: 20px auto 0px auto;
+  border: gray 1px solid;
+}
+
+img.leftfloat {
+  padding-top: 8px;
+  margin-right: 5px;
+  float: left;
+}
+
+img.nofloat {
+  float: none;
+}
+
+img.centered  {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#article img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.subnav, #langhu, #langen, #widthholder, #right, #jump, #subnav {
+  display: none;
+}
+
+#nav a, #nav .current {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Garamond, Verdana, Arial, sans-serif;
+  font-size: 1.2em;
+  display: block;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+  border: black 1px dotted;
+}
+
+#nav .current{
+  background: #FFF;
+  color: #000;
+  border: black 1px solid;
+  margin-right: 2px;
+}
+
+#nav {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+}
+
+#nav li {
+  display: block;
+  float: left;
+  text-align: center;
+  border-right: white 2px solid;  
+}
+
+/* start IE6 definitions */
+#nav li {
+  width: 0px;
+}
+
+#nav li a, #nav .current {
+  width: 85px;
+}
+/* end IE6 definitions */
+
+/* start definitions for standard compliant browsers */
+html > body #nav li, html > body #nav li a, html > body #nav .current {
+  width: 91px;
+}
+
+html > body #nav li {
+  margin-right: 2px;
+}
+/* end definitions for standard compliant browsers */
+
+#nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#langen, #langhu, #langen a, #langhu a {
+  display: none;
+}
+
+dt {
+  padding: 5px 0 0 0;
+  font-weight: bold;
+}
+
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+
+#credits h2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  padding: 0;
+}
+
+#credits #wai, #credits #section508 {
+  display: none;
+}
+
+#credits #bibliography ul {
+  padding: 0 0 0 15px;
+  margin: 0 0 10px 5px;
+}
+
+#credits #bibliography li {
+  list-style-type: square;
+}
+
+html>body #credits #bibliography ul li:before {
+	content: "\0020 \0020 \0020 \00BB \0020";
+	color: black;
+  list-style-type: none;
+}
+
+html>body #credits #bibliography ul {
+  padding: 0px;
+  margin: 0 0 10px 0;
+}
+
+html>body #credits #bibliography li {
+  list-style-type: none;
+}
+
+.teammate {
+  margin-top: 10px;
+}
+
+.teammate img {
+  border: #B2B2B2 1px solid;
+  display: block;
+}
+
+.teammate h3 {
+  margin: 0px;
+  letter-spacing: 1px;
+}
+
+.odd img, .even img {
+  float: left;
+  margin-right: 5px;
+}
+
+.odd h3, .odd .title, .even h3, .even .title {
+  background: url("gfx/horizontal_line_right.gif") bottom right no-repeat;
+}
+
+#crew {
+  margin-top: 10px;
+}
+
+.clearer {
+  clear: both;
+}
